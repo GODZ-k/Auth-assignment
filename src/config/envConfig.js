@@ -1,0 +1,15 @@
+import "dotenv/config"
+
+const getEnv = {
+    PORT: process.env.PORT,
+    DB_URL: process.env.DATABASE_URL,
+    ACCESS_TOKEN_SECRET_KEY: process.env.ACCESS_TOKEN_SECRET_KEY,
+    REFRESH_TOKEN_SECRET_KEY: process.env.REFRESH_TOKEN_SECRET_KEY,
+    ACCESS_TOKEN_EXPIRY: process.env.ACCESS_TOKEN_EXPIRY,
+    REFRESH_TOKEN_EXPIRY: process.env.REFRESH_TOKEN_EXPIRY,
+    VERIFICATION_TOKEN_SECRET_KEY: process.env.VERIFICATION_TOKEN_SECRET_KEY,
+    VERIFICATION_TOKEN_EXPIRY: process.env.VERIFICATION_TOKEN_EXPIRY,
+    ARKJET_SECRET_KEY: process.env.ARCJET_KEY
+}
+
+export default getEnv
