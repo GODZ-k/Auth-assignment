@@ -62,16 +62,7 @@ const requireAuth = async (req, res, next) => {
  */
 const isAdmin = async (req, res, next) => {
     try {
-/*************  ✨ Codeium Command ⭐  *************/
-/**
- * Middleware to check if the user is an admin
- * If the user is not an admin, a 422 error response is sent
- * If the user is an admin, the request is forwarded to the next middleware
- * @param {Object} req - The request object
- * @param {Object} res - The response object
- * @param {Function} next - The next middleware function
- */
-/******  1db13be9-29c7-4d16-959c-5ba7a89909af  *******/        const user  = req.user
+        const user = req.user
 
         if (!user || user.role !== 'admin') {
             return res.status(422).json({
@@ -104,6 +95,7 @@ const isAdmin = async (req, res, next) => {
 
 
 
-export { requireAuth,
+export {
+    requireAuth,
     isAdmin
 }
